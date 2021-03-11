@@ -12,11 +12,30 @@ class StateCard extends Component {
   }
 
   // Functions to handle button presses.
-  handleButton1 = () => {
-    alert("Button 1 pressed!");
+ handleButton1 = () => {
+    let currentStatus = this.state.button1
+    if (currentStatus === "On!") {
+        this.setState({button1: "off..."})
+    } 
+    else {
+        this.setState({button1: "On!"})
+    handleButton2 = () => {
+  
+     this.setState(state => {
+         state.button2 = state.button2 + 1
+         return state
+     })
   }
-  handleButton2 = () => {}
-  handleButton3 = () => {}
+   handleButton3 = () => {
+        if (this.state.button3 === "you") {
+          this.setState({button3: "are"})
+      } else  if 
+   (this.state.button3 === "are") {
+          this.setState({button3: "cool"})
+      } else {
+          this.setState({button3: "you"})
+  }
+}
 
   // The render function
   render() {
